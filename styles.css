@@ -1,0 +1,182 @@
+html, body, h2, p {
+    padding: 0;
+    margin: 0;
+}
+
+.fullpage {
+  height: 100vh;
+  width: 100vw;
+}
+
+.scene {
+    height: 800%;
+    width: 100%;
+}
+
+.scene--blue {
+    background: #5fc2f9;
+}
+
+.scene--green {
+    background: #8de1a8;
+}
+
+.scene--orange {
+    background: #f9d25d;
+}
+
+.scene__content {
+    position: fixed;
+    top: 35%;
+    left: 55%;
+}
+
+.title {
+  font-size: 100px;
+  font-weight: 900;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.instructions {
+  font-size: 20px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  animation: blink 1.5s linear infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#stickman {
+    position: fixed;
+    left: 20%;
+    bottom: 15%;
+    width: 120px;
+    height: 180px;
+    /* outline: 4px solid white; */
+}
+
+#head {
+    position: absolute;
+    top: 10%;
+    left: 35%;
+    width: 30%;
+    height: 20%;
+    background: black;
+    border-radius: 50%;
+}
+
+#body {
+    position: absolute;
+    top: 29%;
+    left: 47%;
+    width: 6%;
+    height: 28%;
+    background: black;
+}
+
+#leftArm {
+    position: absolute;
+    top: 29%;
+    left: 42%;
+    width: 6%;
+    height: 22%;
+    background: black;
+    transform: rotate(20deg);
+    border-radius: 50px;
+    animation: moveLeftArm 1.2s infinite;
+}
+
+#rightArm {
+    position: absolute;
+    top: 29%;
+    left: 57%;
+    width: 6%;
+    height: 22%;
+    background: black;
+    transform: rotate(-30deg);
+    border-radius: 50px;
+    animation: moveRightArm 1.2s infinite;
+}
+
+@keyframes moveLeftArm {
+    50% {
+        left: 57%;
+        transform: rotate(-30deg);
+    }
+    100% {
+        left 42%;
+        transform: rotate(20deg);
+    }
+}
+
+@keyframes moveRightArm {
+    50% {
+        left: 42%;
+        transform: rotate(20deg);
+    }
+    100% {
+        left: 57%;
+        transform: rotate(-30deg);
+    }
+}
+
+#leftLeg {
+    position: absolute;
+    top: 55%;
+    left: 40%;
+    width: 6%;
+    height: 25%;
+    background: black;
+    transform: rotate(23deg);
+    border-radius: 50px;
+    animation: moveLeftLeg 1.2s infinite;
+}
+
+#rightLeg {
+    position: absolute;
+    top: 55%;
+    left: 54%;
+    width: 6%;
+    height: 25%;
+    background: black;
+    transform: rotate(-23deg);
+    border-radius: 50px;
+    animation: moveRightLeg 1.2s infinite;
+}
+
+@keyframes moveLeftLeg {
+    50% {
+        left: 54%;
+        transform: rotate(-23deg);
+
+    }
+    100% {
+        left: 40%;
+        transform: rotate(23deg);
+    }
+}
+
+@keyframes moveRightLeg {
+    50% {
+        left: 40%;
+        transform: rotate(23deg);
+
+    }
+    100% {
+        left: 54%;
+        transform: rotate(-23deg);
+    }
+}
+
+/* * {
+  background: #000 !important;
+  color: #0f0 !important;
+  outline: solid #f00 1px !important;
+} */
